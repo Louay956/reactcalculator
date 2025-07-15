@@ -1,0 +1,84 @@
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="./images/logo.svg" alt="logo" />
+
+      <section id="calculator">
+        <form id="tip-form">
+          <!-- Bill Input -->
+          <div class="form-group">
+            <label for="bill">Bill</label>
+            <input
+              type="number"
+              id="bill"
+              name="bill"
+              placeholder="0"
+              min="0"
+              required
+            />
+          </div>
+          <!-- Tip Selection -->
+          <div class="form-group">
+            <label>Select Tip %</label>
+            <div class="grid-3">
+              <button type="button" class="tip-button" data-value="5" >
+                5%
+              </button>
+              <button type="button" class="tip-button" data-value="10">
+                10%
+              </button>
+              <button type="button" class="tip-button" data-value="15">
+                15%
+              </button>
+              <button type="button" class="tip-button" data-value="25">
+                25%
+              </button>
+              <button type="button" class="tip-button" data-value="50">
+                50%
+              </button>
+              <input type="text" id="custom-tip" placeholder="Custom" min="0" />
+            </div>
+          </div>
+          <!-- Number of People -->
+          <div class="form-group">
+            <label for="people">Number of People</label>
+            <input
+              type="number"
+              id="people"
+              name="people"
+              placeholder="0"
+              min="1"
+              required
+            />
+          </div>
+        </form>
+        <!-- Output Section -->
+        <div id="output">
+          <div class="outputs space-between">
+            <span
+              >Tip Amount <br />
+              <small>/ person</small></span
+            >
+            <h1 class="price" id="tip-amount">$0.00</h1>
+          </div>
+          <div class="outputs space-between">
+            <span
+              >Total <br />
+              <small>/ person</small></span
+            >
+            <h1 class="price" id="total-amount">$0.00</h1>
+          </div>
+          <button id="reset-button">Reset</button>
+        </div>
+      </section>
+    </main>
